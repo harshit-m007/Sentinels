@@ -1,6 +1,6 @@
 # Team Sentinels
 ## Team Members
-- Harshit Minhas
+- Harshit Minhas (Leader)
 - Hardik Ahuja
 - Kartik Sharma
 - Anmol Bansal
