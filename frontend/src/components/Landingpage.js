@@ -1,15 +1,23 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import "./Landingpage.css" // Import the CSS file
-// import Aeroearth from "./images/Aeroearth.jpg" // Import the image
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Landingpage.css"; // Import the CSS file
 
 function LandingPage() {
   return (
     <div className="landing-container">
       <div className="left-content">
         <h1 className="heading">Sen-forge</h1>
-        <h2>Welcome to Sen-forge: Your Aviation Safety Companion</h2>
-        <p>AeroScan is a cutting-edge platform for detecting airplane damages and faulty wiring, ensuring aviation safety. With advanced image analysis and AI-driven technology, we provide accurate inspections for maintenance professionals and enthusiasts alike. Join us in revolutionizing aviation safety with our comprehensive inspection solutions.</p>
+        <h2>Welcome to Sen-forge: Your Image Forgery Detection Solution</h2>
+        <p>
+          Sen-forge leverages cutting-edge machine learning techniques to detect
+          and classify image forgeries. Our tool highlights manipulated regions,
+          ensuring you can trust the images you see.
+        </p>
+        <p>
+          Whether you are a professional in digital forensics or just looking to
+          verify the authenticity of an image, Sen-forge provides accurate and
+          efficient solutions to help you in your journey. 
+        </p>
         <ul>
           <li className="btn-1">
             <Link to="/retouching" className="button">
@@ -21,18 +29,17 @@ function LandingPage() {
               Splicing
             </Link>
           </li>
-          <li className="btn-2">
+          <li className="btn-3">
             <Link to="/copy-move" className="button">
-              Copy-move
+              Copy-Move
             </Link>
           </li>
         </ul>
       </div>
-      <div className="right-content">
-        {" "}
-      </div>
+      
     </div>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;
+

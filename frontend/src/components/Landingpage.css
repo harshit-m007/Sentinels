@@ -1,69 +1,129 @@
+/* Container for the landing page */
 .landing-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px; /* Increase padding for better spacing */
+  overflow: hidden;
+  gap: 40px; /* Add gap between left and right content */
+}
+
+/* Left side content styling */
+.left-content {
+  flex: 1;
+}
+
+/* Main heading styling */
+.heading {
+  font-size: 64px; /* Slightly smaller to fit better */
+  color: #1993d1; /* Vivid blue */
+  margin-bottom: 20px;
+  font-weight: 700; /* Bold font */
+}
+
+/* Subtitle with better margin and color */
+h2 {
+  font-size: 24px;
+  color: #4c5865;
+  margin-bottom: 15px;
+}
+
+/* Paragraph styling with justified alignment */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #4c5865;
+  max-width: 600px; /* Limit the width of the paragraph */
+}
+
+/* List of buttons */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 12px 25px; /* Increased padding for better button size */
+  background-color: #269bd6;
+  color: #fff;
+  font-size: 16px; /* Larger text for better readability */
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #4c5865; /* Darker color on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Button spacing */
+.btn-1,
+.btn-2 {
+  margin-bottom: 10px;
+}
+
+/* Right content styling */
+.right-content {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Image styling for better responsiveness */
+.right-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow to make the image pop */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.right-content img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow: hidden;
+    text-align: center;
   }
   
-  .left-content {
-    flex: 1;
-  }
-  
-  .heading {
-    font-size: 70px;
-    color: #1993d1; /* Blue color */
-    margin-bottom: 20px; /* Add some bottom margin */
-    margin-top: 0px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    color: #4c5865;
-  }
-  
-  p {
-    font-size: 15px;
-    margin-bottom: 0px;
-    text-align: justify;
-    color: #4c5865;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 20px; /* Increase the margin-right */
-    background-color: #269bd6; /* Blue color */
-    color: #fff; /* White color */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #4c5865; /* Darker blue color on hover */
-  }
-  
-  .btn-1,
-  .btn-2 {
-    margin-bottom: 5px;
+  .left-content,
+  .right-content {
+    flex: none;
+    width: 100%;
   }
   
   .right-content {
-    flex: 1;
-    text-align: right;
+    margin-top: 20px;
   }
   
-  .right-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  .heading {
+    font-size: 48px;
   }
+
+  p {
+    max-width: 100%; /* Ensure text takes full width on mobile */
+  }
+  
+  ul {
+    flex-direction: column;
+    gap: 10px; /* Stack buttons vertically on smaller screens */
+  }
+}
+
   
