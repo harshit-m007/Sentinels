@@ -1,0 +1,198 @@
+/* Main container with a vibrant, multi-layer gradient background */
+.retouching-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle at top left, #1e3c72, #2a5298, #6dd5ed);
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.retouching-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(30,60,114, 0.7), rgba(106,213,237, 0.7));
+  z-index: -1;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Heading with a vivid neon glow and subtle pulse animation */
+.retouching-heading {
+  font-size: 50px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 20px rgba(33, 193, 243, 0.9), 0px 0px 30px rgba(0, 255, 255, 0.6);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+/* Neon glow animation */
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0px 0px 15px rgba(33, 193, 243, 0.8), 0px 0px 25px rgba(33, 193, 243, 0.5);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0px 0px 25px rgba(33, 193, 243, 1), 0px 0px 40px rgba(0, 255, 255, 0.8);
+    transform: scale(1.05);
+  }
+}
+
+/* Description with a glowing underline effect */
+.retouching-description {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 45px;
+  max-width: 750px;
+  line-height: 1.8;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.retouching-description::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: rgba(33, 193, 243, 0.8);
+  transform: translateX(-50%);
+  animation: glowingUnderline 2s infinite alternate;
+}
+
+@keyframes glowingUnderline {
+  from {
+    width: 40%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+/* Upload button with 3D effect, gradient, and hover animation */
+.upload-area {
+  margin-bottom: 20px; /* Reduced margin to align with submit button */
+}
+
+.upload-input, .submit-button {
+  padding: 16px 50px;
+  border: none;
+  background: linear-gradient(135deg, #21c1f3, #3a5d98, #34e89e);
+  color: white;
+  font-size: 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(33, 193, 243, 0.6), inset 0 2px 3px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  margin-top: 15px; /* Space between the buttons */
+}
+
+/* Submit button specific styles */
+.submit-button {
+  padding: 24px 70px; /* Increased padding for a larger button */
+  font-size: 28px; /* Increased font size for better visibility */
+  background: linear-gradient(135deg, #34e89e, #21c1f3, #34c28f); /* Added an additional color for depth */
+  border: none; /* No border for a cleaner look */
+  border-radius: 50px; /* Rounded edges for a modern look */
+  color: white; /* Text color */
+  font-weight: bold; /* Bolder text for emphasis */
+  cursor: pointer; /* Pointer cursor for better UX */
+  box-shadow: 0 15px 30px rgba(33, 193, 243, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.3); /* Enhanced shadow for depth */
+  transition: all 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  position: relative; /* Allows for positioning of pseudo-elements */
+  z-index: 2; /* Keep it above the background */
+}
+
+.upload-input:hover, .submit-button:hover {
+  background: linear-gradient(135deg, #1ca2d9, #21c1f3, #28b486);
+  box-shadow: 0 20px 40px rgba(33, 193, 243, 0.8), inset 0 3px 5px rgba(255, 255, 255, 0.6);
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+  background: linear-gradient(135deg, #28b486, #1ca2d9);
+}
+
+/* Smooth image preview section with a glowing border */
+.image-preview {
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.preview-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Image styling with hover zoom, border glow and shadow effect */
+.preview-image {
+  max-width: 85%;
+  height: auto;
+  border-radius: 15px;
+  border: 4px solid rgba(33, 193, 243, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.1);
+  border-color: rgba(33, 193, 243, 0.8);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Smooth fade-in for elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design tweaks for smaller screens */
+@media (max-width: 768px) {
+  .retouching-heading {
+    font-size: 38px;
+  }
+
+  .retouching-description {
+    font-size: 18px;
+  }
+
+  .upload-input, .submit-button {
+    font-size: 20px; /* Slightly reduce size on smaller screens */
+    padding: 15px 40px; /* Adjust padding */
+  }
+
+  .preview-heading {
+    font-size: 24px;
+  }
+}
