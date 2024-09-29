@@ -12,10 +12,10 @@ app = Flask(__name__)
 CORS(app, resources={r"/upload": {"origins": "http://localhost:3000"}})
 
 # Set the directory where images are stored
-IMAGE_FOLDER = r'D:/Sentinels/team_sentinels/backend/images'  # Update this path accordingly
+IMAGE_FOLDER = r'C:\Users\prasu\Desktop\sentinels\Sentinels\team_sentinels\backend\images'  # Update this path accordingly
 
 # Directory to save uploaded images
-UPLOAD_FOLDER = r'D:/Sentinels/team_sentinels/backend/uploads'
+UPLOAD_FOLDER = r'C:\Users\prasu\Desktop\sentinels\Sentinels\team_sentinels\backend\uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/upload', methods=['POST'])
@@ -48,7 +48,7 @@ def process_image(file_path):
 
     # implement model here
     image_path = file_path
-    check_forgery(model=model, device=device, img_path=image_path,output_dir=r'D:\Sentinels\team_sentinels\backend\images')
+    check_forgery(model=model, device=device, img_path=image_path,output_dir=r'C:\Users\prasu\Desktop\sentinels\Sentinels\team_sentinels\backend\images')
 
     isForged = True
     image1 = "predicted_forgery_mask.png" #forgery mask

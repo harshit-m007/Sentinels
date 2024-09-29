@@ -475,7 +475,7 @@ class IMTFE(nn.Module):
         self.bayar_final[2, 2] = -1
 
         self.SRMConv2D = nn.Conv2d(in_channel, 9, 5, 1, padding=0, bias=False)
-        self.SRMConv2D.weight.data=torch.load(r'D:\Sentinels\team_sentinels\backend\model\IMTFEv4.pt')['SRMConv2D.weight']
+        self.SRMConv2D.weight.data=torch.load(r'C:\Users\prasu\Desktop\sentinels\Sentinels\team_sentinels\backend\model\IMTFEv4.pt')['SRMConv2D.weight']
 
         ##SRM filters (fixed)
         for param in self.SRMConv2D.parameters():
